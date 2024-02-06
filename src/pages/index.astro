@@ -1,11 +1,59 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Welcome to TFYTFM">
 	<main>
 		<h1>Comming soon <span class="text-gradient">TFYTFM</span></h1>
+		<section>
+			<h2>¿What is it?</h2>
+			<p>
+				Today for You, Tomorrow for Me is a free software initiative
+				that aims to empower youth without tech access, while also
+				encouraging collaboration and service exchange among small
+				businesses. Together, we're building an inclusive and equitable
+				tech future.
+			</p>
+		</section>
+		<section>
+			<h2>Our Mission</h2>
+			<p>
+				Our mission is to provide access to software development
+				education for children who would otherwise lack it. We believe
+				in the power of education and technology to transform lives and
+				opportunities.
+			</p>
+		</section>
+		<section>
+			<h2>Our Vision</h2>
+			<p>
+				Our vision is to create a software ecosystem and a community
+				engaged in the development of free software. We want to promote
+				service exchange among businesses and build a collaborative
+				system where everyone can contribute and learn.
+			</p>
+		</section>
+		<section>
+			<h2>Why Today for You, Tomorrow for Me?</h2>
+			<p>
+				We believe in the principle of today for you, tomorrow for me,
+				promoting a spirit of mutual help and collective growth. In our
+				organization, every community member gets the chance to learn,
+				grow, and help others do the same.
+			</p>
+		</section>
+
+		<h3>Join Us</h3>
+		<p>
+			We invite you to join us in our mission. Whether you want to learn
+			to code, contribute with your expertise in software development, or
+			simply want to support our cause, there's a place for you in Today
+			for You, Tomorrow for Me. Together, we can code a better future.
+		</p>
+		<a href="https://discord.com/invite/VTPH7rtZfg" class="button"
+			>Join Discord</a
+		>
 	</main>
 </Layout>
 
@@ -41,7 +89,10 @@ import Card from '../components/Card.astro';
 	.instructions {
 		margin-bottom: 2rem;
 		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		background: linear-gradient(
+			rgba(var(--accent-dark), 66%),
+			rgba(var(--accent-dark), 33%)
+		);
 		padding: 1.5rem;
 		border-radius: 8px;
 	}
@@ -62,4 +113,21 @@ import Card from '../components/Card.astro';
 		gap: 2rem;
 		padding: 0;
 	}
+
+	/* BUTTON */
+	.button {
+			display: inline-block;
+			padding: 10px 20px;
+			font-size: 20px;
+			text-align: center;
+			text-decoration: none;
+			background-color: #7289da;
+			color: white;
+			border-radius: 5px;
+			transition: background-color 0.3s ease;
+		}
+
+		.button:hover {
+			background-color: #5865f2;
+		}
 </style>
