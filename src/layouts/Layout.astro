@@ -7,14 +7,15 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Today for You, Tomorrow for Me es una iniciativa de software libre que busca empoderar a jóvenes sin acceso a tecnología, mientras fomenta la colaboración e intercambio de servicios entre pequeñas empresas." />
+		<meta name="description" content="Today for You, Tomorrow for Me is a free software initiative that seeks to empower young people without access to technology, while fostering collaboration and service exchange between small businesses." />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/src/styles/global.css">
 		<title>{title}</title>
 	</head>
 	<body>
@@ -24,12 +25,12 @@ const { title } = Astro.props;
 					<span class="text-gradient">TFYTFM</span>
 				</a>
 				<div class="nav-links">
-					<a href="/about">¿Qué es?</a>
+					<a href="/about">What is it?</a>
 					<a href="/roadmap">Roadmap</a>
-					<a href="/projects">Proyectos</a>
+					<a href="/projects">Projects</a>
 					<a href="/docs">Docs</a>
 					<a href="https://discord.com/invite/VTPH7rtZfg" class="cta-button hover-float">
-						Unirse
+						Join
 					</a>
 				</div>
 			</div>
@@ -43,26 +44,26 @@ const { title } = Astro.props;
 			<div class="footer-content">
 				<div class="footer-section">
 					<h3 class="text-gradient">TFYTFM</h3>
-					<p>Construyendo un futuro tecnológico más inclusivo y equitativo.</p>
+					<p>Building a more inclusive and equitable technological future.</p>
 				</div>
 				<div class="footer-section">
-					<h4>Enlaces</h4>
-					<a href="#about">Sobre Nosotros</a>
+					<h4>Links</h4>
+					<a href="#about">About Us</a>
 					<a href="#roadmap">Roadmap</a>
-					<a href="#projects">Proyectos</a>
+					<a href="#projects">Projects</a>
 					<a href="#docs">Docs</a>
 					<a href="https://discord.com/invite/VTPH7rtZfg" class="cta-button hover-float">
-						Unirse
+						Join
 					</a>
 				</div>
 				<div class="footer-section">
-					<h4>Comunidad</h4>
+					<h4>Community</h4>
 					<a href="https://discord.com/invite/VTPH7rtZfg">Discord</a>
 					<a href="https://github.com/tfytfm">GitHub</a>
 				</div>
 			</div>
 			<div class="footer-bottom">
-				<p>&copy; {new Date().getFullYear()} TFYTFM. Todos los derechos reservados.</p>
+				<p>&copy; {new Date().getFullYear()} TFYTFM. All rights reserved.</p>
 			</div>
 		</footer>
 	</body>
