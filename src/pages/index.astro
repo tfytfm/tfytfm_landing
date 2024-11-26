@@ -1,76 +1,114 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
 
-<Layout title="Documentation - TFYTFM">
-  <main>
-    <h1>Our <span class="text-gradient">Documentation</span></h1>
+<Layout title="Welcome to TFYTFM">
+	<main>
+		<h1>Comming soon <span class="text-gradient">TFYTFM</span></h1>
+		<section>
+			<h2>¿What is it?</h2>
+			<p>
+				Today for You, Tomorrow for Me is a free software initiative
+				that aims to empower youth without tech access, while also
+				encouraging collaboration and service exchange among small
+				businesses. Together, we're building an inclusive and equitable
+				tech future.
+			</p>
+		</section>
+		<section>
+			<h2>Our Mission</h2>
+			<p>
+				Our mission is to provide access to software development
+				education for children who would otherwise lack it. We believe
+				in the power of education and technology to transform lives and
+				opportunities.
+			</p>
+		</section>
+		<section>
+			<h2>Our Vision</h2>
+			<p>
+				Our vision is to create a software ecosystem and a community
+				engaged in the development of free software. We want to promote
+				service exchange among businesses and build a collaborative
+				system where everyone can contribute and learn.
+			</p>
+		</section>
+		<section>
+			<h2>Why Today for You, Tomorrow for Me?</h2>
+			<p>
+				We believe in the principle of today for you, tomorrow for me,
+				promoting a spirit of mutual help and collective growth. In our
+				organization, every community member gets the chance to learn,
+				grow, and help others do the same.
+			</p>
+		</section>
 
-    <div class="docs-grid">
-      <a href="#" class="doc-card">
-        <h3>Mobile Dev Guide</h3>
-        <p>Learn mobile development with Flutter</p>
-      </a>
-
-      <a href="#" class="doc-card">
-        <h3>Web3 Handbook</h3>
-        <p>Complete Web3 development guide</p>
-      </a>
-
-      <a href="#" class="doc-card">
-        <h3>DApps Tutorial</h3>
-        <p>Create your first decentralized application</p>
-      </a>
-
-      <a href="#" class="doc-card">
-        <h3>Smart Contracts</h3>
-        <p>Smart contract development</p>
-      </a>
-    </div>
-  </main>
+		<h3>Join Us</h3>
+		<p>
+			We invite you to join us in our mission. Whether you want to learn
+			to code, contribute with your expertise in software development, or
+			simply want to support our cause, there's a place for you in Today
+			for You, Tomorrow for Me. Together, we can code a better future.
+		</p>
+		<a href="https://discord.com/invite/VTPH7rtZfg" class="button"
+			>Join Discord</a
+		>
+	</main>
 </Layout>
 
 <style>
-  main {
-    padding: 2rem;
-    max-width: var(--max-width);
-    margin: 0 auto;
-  }
+	main {
+		padding: 2rem;
+		max-width: var(--max-width);
+		margin: 0 auto;
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
 
-  h1 {
-    font-size: 3rem;
-    text-align: center;
-    margin: 3rem 0;
-  }
+	h1 {
+		font-size: 3rem;
+		text-align: center;
+		margin: 3rem 0;
+		font-weight: 700;
+	}
 
-  .docs-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-  }
+	section {
+		background: rgba(var(--gray), 0.7);
+		border-radius: 20px;
+		padding: 2rem;
+		margin: 2rem 0;
+		transition: all 0.3s ease;
+	}
 
-  .doc-card {
-    background: rgba(var(--gray), 0.7);
-    border-radius: 15px;
-    padding: 2rem;
-    text-decoration: none;
-    color: rgb(var(--text));
-    transition: all 0.3s ease;
-  }
+	section:hover {
+		transform: translateY(-5px);
+		background: rgba(var(--accent), 0.1);
+	}
 
-  .doc-card:hover {
-    transform: translateY(-5px);
-    background: rgba(var(--accent), 0.1);
-  }
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
 
-  h3 {
-    margin: 0;
-    color: rgb(var(--accent));
-  }
+	/* BUTTON */
+	.button {
+		display: inline-block;
+		padding: 10px 20px;
+		font-size: 20px;
+		text-align: center;
+		text-decoration: none;
+		background-color: #7289da;
+		color: white;
+		border-radius: 5px;
+		transition: background-color 0.3s ease;
+	}
 
-  p {
-    margin: 1rem 0 0;
-    opacity: 0.8;
-  }
+	.button:hover {
+		background-color: #5865f2;
+	}
 </style>
