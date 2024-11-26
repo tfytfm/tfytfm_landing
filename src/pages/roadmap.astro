@@ -1,0 +1,99 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Roadmap - TFYTFM">
+  <main>
+    <h1>Nuestro <span class="text-gradient">Roadmap</span></h1>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="content">
+          <h3>Fase 1: Formación</h3>
+          <p>Desarrollo de infraestructura educativa y plataforma de aprendizaje.</p>
+          <ul>
+            <li>Creación de contenido educativo</li>
+            <li>Plataforma de aprendizaje interactiva</li>
+            <li>Mentoría personalizada</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="content">
+          <h3>Fase 2: Hub de Innovación</h3>
+          <p>Ecosistema colaborativo para desarrolladores y emprendedores.</p>
+          <ul>
+            <li>Marketplace de servicios</li>
+            <li>Sistema de reputación</li>
+            <li>Herramientas colaborativas</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="content">
+          <h3>Fase 3: Impacto Social</h3>
+          <p>Sistema blockchain para gestión transparente de donaciones.</p>
+          <ul>
+            <li>Smart contracts para donaciones</li>
+            <li>Trazabilidad de fondos</li>
+            <li>Reportes de impacto</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    padding: 2rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 3rem 0;
+  }
+
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 4rem auto;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: var(--accent-gradient);
+  }
+
+  .timeline-item {
+    padding: 2rem;
+    position: relative;
+    width: calc(50% - 2rem);
+    margin: 2rem 0;
+  }
+
+  .timeline-item:nth-child(odd) {
+    margin-left: auto;
+  }
+
+  .content {
+    background: rgba(var(--gray), 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .content:hover {
+    transform: translateY(-5px);
+    background: rgba(var(--accent), 0.1);
+  }
+</style>

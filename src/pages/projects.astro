@@ -1,0 +1,92 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Proyectos - TFYTFM">
+  <main>
+    <h1>Nuestros <span class="text-gradient">Proyectos</span></h1>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Apps Móviles</h3>
+        <p>Desarrollo con Flutter</p>
+        <ul>
+          <li>Aplicaciones multiplataforma</li>
+          <li>UI/UX moderno</li>
+          <li>Integración con blockchain</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <h3>Web3 & DApps</h3>
+        <p>Aplicaciones descentralizadas</p>
+        <ul>
+          <li>Smart Contracts</li>
+          <li>DeFi</li>
+          <li>NFTs</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <h3>Blockchain Academy</h3>
+        <p>Formación tecnológica</p>
+        <ul>
+          <li>Cursos online</li>
+          <li>Workshops prácticos</li>
+          <li>Certificaciones</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    padding: 2rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 3rem 0;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .project-card {
+    background: rgba(var(--gray), 0.7);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px);
+    background: rgba(var(--accent), 0.1);
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: rgb(var(--accent));
+  }
+</style>

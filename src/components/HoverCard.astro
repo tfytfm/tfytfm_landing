@@ -1,0 +1,85 @@
+---
+interface Props {
+  title: string;
+  children: any;
+}
+
+const { title } = Astro.props;
+---
+
+<div 
+  class="hover-card"
+  role="button"
+  tabindex="0"
+  aria-expanded="false"
+  aria-controls="hover-content"
+>
+  <h2 id="hover-title">{title}</h2>
+  <div 
+    id="hover-content"
+    class="hover-content"
+    role="region"
+    aria-labelledby="hover-title"
+  >
+    <button 
+      class="close-button" 
+      aria-label="Cerrar contenido"
+      tabindex="0"
+    >
+      ×
+    </button>
+    <div class="content-wrapper">
+      <slot />
+    </div>
+  </div>
+</div>
+
+<style>
+  .hover-card {
+    background: rgba(var(--gray), 0.7);
+    border-radius: 20px;
+    padding: 2rem;
+    cursor: pointer;
+    min-height: 120px;
+    border: 1px solid rgba(var(--accent-light), 0.1);
+    backdrop-filter: blur(10px);
+    position: relative;
+    outline: none;
+  }
+
+  .hover-card:focus-visible {
+    outline: 2px solid rgb(var(--accent));
+    outline-offset: 2px;
+  }
+
+  .hover-card h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .hover-content {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    right: -50%;
+    width: 50%;
+    height: 100vh;
+    background: rgba(var(--gray), 0.95);
+    padding: 2rem;
+    z-index: 1000;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+  }
+
+  .hover-card:hover .hover-content,
+  .hover-card:focus-within .hover-content {
+    opacity: 1;
+    right: 0;
+  }
+
+  .content-wrapper {
+    max-width: 65ch;
+    margin: 0 auto;
+  }
+</style> 
